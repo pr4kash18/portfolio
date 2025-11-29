@@ -54,8 +54,14 @@ certCards.forEach(card => {
     card.addEventListener('click', (e) => {
         // Prevent triggering when clicking on text
         if (e.target.tagName !== 'H3' && e.target.tagName !== 'P') {
-            const imgSrc = card.querySelector('.cert-img').innerHTML;
-            lightboxImg.src = ''; // Placeholder since we're using icons
+            // Get the image source from the certificate card
+            const imgElement = card.querySelector('.cert-img img');
+            if (imgElement) {
+                lightboxImg.src = imgElement.src;
+            } else {
+                // Fallback if no image is found
+                lightboxImg.src = '';
+            }
             document.querySelector('.lightbox-caption').textContent = card.querySelector('h3').textContent;
             lightbox.style.display = 'block';
         }
