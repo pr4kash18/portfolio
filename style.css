@@ -242,7 +242,7 @@ img {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding-top: 80px;
+  padding-top: 120px;
   background: var(--bg-color);
   position: relative;
   overflow: hidden;
@@ -1004,12 +1004,13 @@ section {
   }
   
   .hero {
-    padding-top: 120px;
+    padding-top: 180px;
   }
   
   .hero-container {
     flex-direction: column;
     text-align: center;
+    margin-top: 20px;
   }
   
   .hero-content {
@@ -1041,7 +1042,7 @@ section {
 
 @media screen and (max-width: 576px) {
   .hero {
-    padding-top: 120px;
+    padding-top: 200px;
   }
 
   .hero-content h1 {
