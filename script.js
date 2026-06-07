@@ -83,11 +83,73 @@ lightbox.addEventListener('click', (e) => {
 downloadResumeBtn.addEventListener('click', (e) => {
     e.preventDefault();
     
-    // Option 1: Link to the resume file we created
-    window.open('resume.txt', '_blank');
+    // Create resume content
+    const resumeContent = `CHANDRA PRAKASH CHOUBISA
+Student - BTech CSE (3rd Year)
+Geetanjali Institute of Technical Studies, Udaipur, Rajasthan
+
+Email: cpchoubisa18@gmail.com
+Location: Udaipur, Rajasthan
+GitHub: https://github.com/pr4kash18
+LinkedIn: https://www.linkedin.com/in/chandra-prakash-choubisa-0526653b7
+LeetCode: https://leetcode.com/u/chandra-pr4kash
+
+OBJECTIVE:
+Aspiring machine learning practitioner with strong Python skills and growing expertise in DSA in Java for logic building. Seeking opportunities to apply machine learning, Python, and algorithmic problem solving to practical projects.
+
+EDUCATION:
+Bachelor of Technology in Computer Science and Engineering
+Geetanjali Institute of Technical Studies, Udaipur
+Expected Graduation: 2028
+
+SKILLS:
+• Programming Languages: Python, C, Java, JavaScript
+• Data Structures & Algorithms: Java
+• Web Technologies: HTML, CSS
+• Problem Solving and Analytical Thinking
+• Machine Learning & AI
+
+CERTIFICATIONS:
+• Digital Productivity with AI - YuWaah & UNICEF
+• Basic Python - Simplilearn
+• Break Into Data Analytics - Coding Ninjas & KodeInKGP
+• Machine Learning using AI - by Grras
+
+PROJECTS:
+1. Student Management System
+   - Technologies: Java, JDBC, MySQL
+   - GitHub: https://github.com/pr4kash18/student-management-system.git
+   - Scalable desktop application for managing student records, attendance, and grades
+
+2. Spam Hunter
+   - Technologies: Python, Streamlit, Scikit-learn, Pandas, Numpy
+   - GitHub: https://github.com/pr4kash18/spam-message-detector.git
+   - Live App: https://spam-hunter.streamlit.app/
+   - AI/ML-based spam detection system with interactive web interface
+
+INTERESTS:
+• Machine Learning
+• Algorithmic Problem Solving
+• Building Practical Projects
+• Continuous Learning
+• Data Science
+
+REFERENCES:
+Available upon request
+`;
     
-    // Option 2: Alert with instructions (alternative implementation)
-    // alert('To download my resume, please contact me at cpr4kash18@gmail.com and I\'ll send it to you.\n\nAlternatively, you can create a resume file and place it in the root directory of this portfolio, then update the download link in the script.js file.');
+    // Create a blob from the content
+    const blob = new Blob([resumeContent], { type: 'text/plain' });
+    const url = window.URL.createObjectURL(blob);
+    
+    // Create a temporary link and trigger download
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'Chandra_Prakash_Choubisa_Resume.txt';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    window.URL.revokeObjectURL(url);
 });
 
 // Smooth Scrolling for Anchor Links

@@ -1,35 +1,37 @@
 Chandra Prakash Choubisa
-Student - BTech CSE (2nd Year)
+Student - BTech CSE (3rd Year)
 Geetanjali Institute of Technical Studies, Udaipur, Rajasthan
 
-Email: cpr4kash18@gmail.com
+Email: cpchoubisa18@gmail.com
 Location: Udaipur, Rajasthan
 GitHub: https://github.com/pr4kash18
 
 Objective:
-Aspiring cybersecurity professional with a strong foundation in programming and emerging technologies. Seeking opportunities to apply my skills in real-world digital security challenges.
+Aspiring machine learning practitioner with strong Python skills and growing expertise in DSA in Java for logic building. Seeking opportunities to apply machine learning, Python, and algorithmic problem solving to practical projects.
 
 Education:
 Bachelor of Technology in Computer Science and Engineering
 Geetanjali Institute of Technical Studies, Udaipur
-Expected Graduation: 2025
+Expected Graduation: 2028
 
 Skills:
-• Programming Languages: Python, C
+• Programming Languages: Python, C, Java, JavaScript
+• Data Structures & Algorithms: Java
 • Web Technologies: HTML, CSS
-• Game Development: Basic Unity Engine
 • Problem Solving and Analytical Thinking
+
 
 Certifications:
 • Digital Productivity with AI - YuWaah & UNICEF
 • Basic Python - Simplilearn
 • Break Into Data Analytics - Coding Ninjas & KodeInKGP
+• Machine Learning using AI - by Grras
 
 Projects:
 • [Add your project details here]
 
 Interests:
-• Cybersecurity
+• Machine Learning
 • Emerging Technologies
 • Building Practical Projects
 • Continuous Learning
