@@ -28,7 +28,9 @@ Certifications:
 • Machine Learning using AI - by Grras
 
 Projects:
-• [Add your project details here]
+• House Price Predictor — A Python + Streamlit machine learning app for predicting Indian home prices with real-time input and data-driven insights.
+• Spam Hunter — An AI-powered spam detection web app using Python, scikit-learn, pandas, and Streamlit for live message classification.
+• Student Management System — A Java-based academic record platform using JDBC and MySQL to manage student data, attendance, and grades.
 
 Interests:
 • Machine Learning
