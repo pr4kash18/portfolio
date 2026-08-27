@@ -8,6 +8,10 @@ const lightboxImg = document.getElementById('lightbox-img');
 const closeLightbox = document.querySelector('.close-lightbox');
 const certCards = document.querySelectorAll('.certificate-card');
 const downloadResumeBtn = document.getElementById('downloadResume');
+const resumeModal = document.getElementById('resumeModal');
+const closeResumeModal = document.querySelector('.close-resume-modal');
+const skillFilters = document.querySelectorAll('.skill-filter');
+const skillCards = document.querySelectorAll('.skill-card');
 
 // Theme Toggle
 themeToggle.addEventListener('click', () => {
@@ -38,15 +42,28 @@ document.querySelectorAll('.nav-link').forEach(link => {
     });
 });
 
-// Header scroll effect
+// Header scroll effect and direction-aware visibility
+let lastScrollY = window.scrollY;
+
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 100) {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        header.classList.add('nav-hidden');
+    } else if (currentScrollY < lastScrollY) {
+        header.classList.remove('nav-hidden');
+    }
+
+    if (currentScrollY > 100) {
         header.style.padding = '10px 0';
         header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
     } else {
+        header.classList.remove('nav-hidden');
         header.style.padding = '20px 0';
         header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
     }
+
+    lastScrollY = currentScrollY;
 });
 
 // Certificate Lightbox
@@ -79,77 +96,45 @@ lightbox.addEventListener('click', (e) => {
     }
 });
 
-// Download Resume functionality
+// Resume download options
 downloadResumeBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    
-    // Create resume content
-    const resumeContent = `CHANDRA PRAKASH CHOUBISA
-Student - BTech CSE (3rd Year)
-Geetanjali Institute of Technical Studies, Udaipur, Rajasthan
+    resumeModal.hidden = false;
+    closeResumeModal.focus();
+});
 
-Email: cpchoubisa18@gmail.com
-Location: Udaipur, Rajasthan
-GitHub: https://github.com/pr4kash18
-LinkedIn: https://www.linkedin.com/in/chandra-prakash-choubisa-0526653b7
-LeetCode: https://leetcode.com/u/chandra-pr4kash
+const hideResumeModal = () => {
+    resumeModal.hidden = true;
+    downloadResumeBtn.focus();
+};
 
-OBJECTIVE:
-Aspiring machine learning practitioner with strong Python skills and growing expertise in DSA in Java for logic building. Seeking opportunities to apply machine learning, Python, and algorithmic problem solving to practical projects.
+// Filter skills by category
+skillFilters.forEach(filter => {
+    filter.addEventListener('click', () => {
+        const selectedCategory = filter.dataset.filter;
 
-EDUCATION:
-Bachelor of Technology in Computer Science and Engineering
-Geetanjali Institute of Technical Studies, Udaipur
-Expected Graduation: 2028
+        skillFilters.forEach(item => {
+            const isActive = item === filter;
+            item.classList.toggle('active', isActive);
+            item.setAttribute('aria-selected', isActive ? 'true' : 'false');
+        });
 
-SKILLS:
-• Programming Languages: Python, C, Java, JavaScript
-• Data Structures & Algorithms: Java
-• Web Technologies: HTML, CSS
-• Problem Solving and Analytical Thinking
-• Machine Learning & AI
+        skillCards.forEach(card => {
+            const categories = card.dataset.category.split(' ');
+            const shouldShow = selectedCategory === 'all' || categories.includes(selectedCategory);
+            card.classList.toggle('skill-card-hidden', !shouldShow);
+        });
+    });
+});
 
-CERTIFICATIONS:
-• Digital Productivity with AI - YuWaah & UNICEF
-• Basic Python - Simplilearn
-• Break Into Data Analytics - Coding Ninjas & KodeInKGP
-• Machine Learning using AI - by Grras
+closeResumeModal.addEventListener('click', hideResumeModal);
 
-PROJECTS:
-1. Student Management System
-   - Technologies: Java, JDBC, MySQL
-   - GitHub: https://github.com/pr4kash18/student-management-system.git
-   - Scalable desktop application for managing student records, attendance, and grades
+resumeModal.addEventListener('click', (e) => {
+    if (e.target === resumeModal) hideResumeModal();
+});
 
-2. Spam Hunter
-   - Technologies: Python, Streamlit, Scikit-learn, Pandas, Numpy
-   - GitHub: https://github.com/pr4kash18/spam-message-detector.git
-   - Live App: https://spam-hunter.streamlit.app/
-   - AI/ML-based spam detection system with interactive web interface
-
-INTERESTS:
-• Machine Learning
-• Algorithmic Problem Solving
-• Building Practical Projects
-• Continuous Learning
-• Data Science
-
-REFERENCES:
-Available upon request
-`;
-    
-    // Create a blob from the content
-    const blob = new Blob([resumeContent], { type: 'text/plain' });
-    const url = window.URL.createObjectURL(blob);
-    
-    // Create a temporary link and trigger download
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = 'Chandra_Prakash_Choubisa_Resume.txt';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    window.URL.revokeObjectURL(url);
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !resumeModal.hidden) hideResumeModal();
 });
 
 // Smooth Scrolling for Anchor Links

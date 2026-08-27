@@ -121,6 +121,13 @@ img {
   outline: none;
 }
 
+.hero-btns {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px;
+}
+
 .primary-btn {
   background: var(--gradient-1);
   color: white;
@@ -136,7 +143,6 @@ img {
   background: transparent;
   color: var(--primary-color);
   border: 2px solid var(--primary-color);
-  margin-left: 15px;
 }
 
 .secondary-btn:hover {
@@ -155,6 +161,10 @@ img {
   background-color: rgba(255, 255, 255, 0.95);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   transition: var(--transition);
+}
+
+.header.nav-hidden {
+  transform: translateY(-100%);
 }
 
 .dark-theme .header {
@@ -177,6 +187,7 @@ img {
   font-weight: 700;
   color: var(--primary-color);
   font-family: var(--font-heading);
+  white-space: nowrap;
 }
 
 .nav-menu {
@@ -454,6 +465,37 @@ section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 30px;
+}
+
+.skill-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 0 auto 35px;
+}
+
+.skill-filter {
+  padding: 10px 18px;
+  border: 1px solid var(--border-color);
+  border-radius: 50px;
+  background: var(--card-bg);
+  color: var(--text-color);
+  font: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.skill-filter:hover,
+.skill-filter.active {
+  border-color: var(--primary-color);
+  background: var(--primary-color);
+  color: white;
+}
+
+.skill-card-hidden {
+  display: none;
 }
 
 .skill-card {
@@ -904,6 +946,104 @@ section {
   height: 150px;
 }
 
+/* Resume download modal */
+.resume-modal[hidden] {
+  display: none;
+}
+
+.resume-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(18, 18, 18, 0.72);
+}
+
+.resume-modal-content {
+  position: relative;
+  width: min(100%, 480px);
+  padding: 38px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  background: var(--bg-color);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 0.25s ease;
+}
+
+.close-resume-modal {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  border: 0;
+  background: transparent;
+  color: var(--text-color);
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.modal-eyebrow {
+  margin-bottom: 6px;
+  color: var(--primary-color);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.resume-modal-content h2 {
+  margin-bottom: 8px;
+  color: var(--heading-color);
+}
+
+.resume-modal-content > p:not(.modal-eyebrow) {
+  margin-bottom: 24px;
+}
+
+.resume-options {
+  display: grid;
+  gap: 12px;
+}
+
+.resume-option {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-color);
+  transition: var(--transition);
+}
+
+.resume-option:hover {
+  border-color: var(--primary-color);
+  background: var(--card-bg);
+  transform: translateY(-2px);
+}
+
+.resume-option > i:first-child {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+}
+
+.resume-option span {
+  display: grid;
+  flex: 1;
+  gap: 3px;
+}
+
+.resume-option small {
+  color: var(--text-color);
+  font-size: 0.78rem;
+}
+
+.resume-option > i:last-child {
+  color: var(--primary-color);
+}
+
 /* Animations */
 @keyframes fadeInUp {
   from {
@@ -947,6 +1087,27 @@ section {
 
 /* Responsive Design */
 @media screen and (max-width: 992px) {
+  .nav-container {
+    gap: 16px;
+  }
+
+  .nav-logo {
+    font-size: 1.45rem;
+  }
+
+  .nav-menu {
+    flex: 1;
+    justify-content: flex-end;
+  }
+
+  .nav-item {
+    margin: 0 8px;
+  }
+
+  .theme-toggle {
+    margin-left: 4px;
+  }
+
   .hero-content h1 {
     font-size: 3rem;
   }
@@ -1024,7 +1185,13 @@ section {
   .hero-btns {
     display: flex;
     flex-direction: column;
+    align-items: stretch;
     gap: 15px;
+  }
+
+  .hero-btns .btn {
+    width: 100%;
+    max-width: 100%;
   }
   
   .secondary-btn {
@@ -1069,6 +1236,47 @@ section {
   
   section {
     padding: 60px 0;
+  }
+
+  .skills .section-title {
+    margin-bottom: 2rem;
+  }
+
+  .skill-filters {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin-bottom: 22px;
+    padding-bottom: 6px;
+    scrollbar-width: thin;
+  }
+
+  .skill-filter {
+    flex: 0 0 auto;
+    padding: 8px 14px;
+    font-size: 0.78rem;
+  }
+
+  .skills-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .skill-card {
+    padding: 16px 8px;
+  }
+
+  .skill-icon {
+    width: 52px;
+    height: 52px;
+    margin-bottom: 10px;
+    font-size: 1.25rem;
+  }
+
+  .skill-card h3 {
+    font-size: 0.88rem;
+    line-height: 1.25;
+    overflow-wrap: anywhere;
   }
   
   .certificates-container,

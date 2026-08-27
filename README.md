@@ -17,7 +17,8 @@ This is a **professional portfolio website** built with **HTML, CSS, and JavaScr
 - ⚡ **Optimized Performance** - Lazy loading for faster page speed
 - 💼 **Tech Stack Badges** - Visual representation of technologies used
 - 📊 **LeetCode Integration** - Direct link to coding profile
-- 📥 **Resume Download** - One-click resume download functionality
+- 🧩 **Categorized Skills Explorer** - Filter skills by programming, databases, frameworks, tools/platforms, and AI/ML
+- 📥 **Resume Download** - Choose between PDF and text resume downloads
 - 🎯 **Live Project Links** - Direct access to live applications
 
 ## 🛠️ Technologies Used
@@ -39,7 +40,9 @@ portfolio/
 ├── index.html              # Main HTML file
 ├── style.css               # Styling
 ├── script.js               # JavaScript functionality
-├── resume.txt              # Resume content (downloadable)
+├── resume/                 # Downloadable resume files
+│   ├── Chandra_Prakash_Choubisa_Resume.pdf
+│   └── resume.txt
 ├── README.md               # This file
 ├── CONTACT_FORM_SETUP.md   # Contact form instructions
 └── images/
@@ -62,9 +65,11 @@ portfolio/
    - LeetCode stats widget
 
 ### 3. **Skills Section**
+   - Filterable categories for programming languages, databases, frameworks, tools/platforms, and AI/ML/data science
    - Programming Languages: Python, C, Java, JavaScript
-   - DSA in Java
    - Web Technologies: HTML, CSS
+   - Databases: MySQL and MongoDB
+   - Tools and frameworks including Git, GitHub, Streamlit, FastAPI, and Flask
    - Machine Learning & AI concepts
 
 ### 4. **Certificates Section**
@@ -98,7 +103,7 @@ portfolio/
 - ✅ Mobile-responsive hamburger menu
 - ✅ Hover effects on cards and links
 - ✅ Lightbox for certificates
-- ✅ One-click resume download
+- ✅ PDF and text resume download options
 
 ### SEO & Accessibility
 - ✅ Semantic HTML
@@ -117,7 +122,7 @@ portfolio/
 1. **Visit the website** - Open in any modern browser
 2. **Explore sections** - Navigate through different sections using the menu
 3. **Switch theme** - Click the moon/sun icon to toggle dark mode
-4. **Download resume** - Click "Download Resume" button on home section
+4. **Download resume** - Click "Download Resume" and choose PDF or text format
 5. **View projects** - Click project cards to see GitHub links and live demos
 6. **Connect** - Use social links to reach out on various platforms
 
@@ -127,7 +132,7 @@ To personalize this portfolio:
 
 1. **Update Personal Info:**
    - Edit `index.html` with your details
-   - Update resume in `resume.txt`
+   - Update the files in `resume/`
 
 2. **Change Colors:**
    - Modify CSS variables in `style.css` (`:root` section)

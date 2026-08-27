@@ -56,7 +56,6 @@
                 <p>Aspiring machine learning practitioner focused on Python and DSA in Java for strong logic building.</p>
                 <div class="hero-btns">
                     <a href="#contact" class="btn primary-btn">Contact Me</a>
-                    <!-- Download Resume button - creates a downloadable resume or provides instructions -->
                     <a href="#" id="downloadResume" class="btn secondary-btn">Download Resume</a>
                 </div>
             </div>
@@ -111,44 +110,112 @@
     <section id="skills" class="skills">
         <div class="container">
             <h2 class="section-title">My <span>Skills</span></h2>
+            <div class="skill-filters" role="tablist" aria-label="Skill categories">
+                <button class="skill-filter active" type="button" role="tab" aria-selected="true" data-filter="all">All Skills</button>
+                <button class="skill-filter" type="button" role="tab" aria-selected="false" data-filter="programming">Programming Languages</button>
+                <button class="skill-filter" type="button" role="tab" aria-selected="false" data-filter="database">Databases</button>
+                <button class="skill-filter" type="button" role="tab" aria-selected="false" data-filter="frameworks">Frameworks</button>
+                <button class="skill-filter" type="button" role="tab" aria-selected="false" data-filter="tools">Tools &amp; Platforms</button>
+                <button class="skill-filter" type="button" role="tab" aria-selected="false" data-filter="data">AI/ML &amp; Data Science</button>
+            </div>
             <div class="skills-container">
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-html5"></i>
-                    </div>
-                    <h3>HTML</h3>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-css3-alt"></i>
-                    </div>
-                    <h3>CSS</h3>
-                </div>
-                <div class="skill-card">
+                <div class="skill-card" data-category="programming">
                     <div class="skill-icon">
                         <i class="fab fa-python"></i>
                     </div>
                     <h3>Python</h3>
                 </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3>C Language</h3>
-                </div>
-                <div class="skill-card">
+                <div class="skill-card" data-category="programming">
                     <div class="skill-icon">
                         <i class="fab fa-java"></i>
                     </div>
                     <h3>Java</h3>
                 </div>
-                <div class="skill-card">
+                <div class="skill-card" data-category="programming">
+                    <div class="skill-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>C</h3>
+                </div>
+                <div class="skill-card" data-category="programming">
+                    <div class="skill-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>C++</h3>
+                </div>
+                <div class="skill-card" data-category="programming">
+                    <div class="skill-icon">
+                        <i class="fab fa-js"></i>
+                    </div>
+                    <h3>JavaScript</h3>
+                </div>
+                <div class="skill-card" data-category="programming">
+                    <div class="skill-icon">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h3>HTML</h3>
+                </div>
+                <div class="skill-card" data-category="programming">
+                    <div class="skill-icon">
+                        <i class="fab fa-css3-alt"></i>
+                    </div>
+                    <h3>CSS</h3>
+                </div>
+                <div class="skill-card" data-category="data">
+                    <div class="skill-icon">
+                        <i class="fas fa-gears"></i>
+                    </div>
+                    <h3>Scikit-learn</h3>
+                </div>
+                <div class="skill-card" data-category="data">
+                    <div class="skill-icon">
+                        <i class="fas fa-table"></i>
+                    </div>
+                    <h3>Pandas</h3>
+                </div>
+                <div class="skill-card" data-category="data">
+                    <div class="skill-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>NumPy</h3>
+                </div>
+                <div class="skill-card" data-category="frameworks">
+                    <div class="skill-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Streamlit</h3>
+                </div>
+                <div class="skill-card" data-category="frameworks">
+                    <div class="skill-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>FastAPI</h3>
+                </div>
+                <div class="skill-card" data-category="frameworks">
+                    <div class="skill-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3>Flask</h3>
+                </div>
+                <div class="skill-card" data-category="tools">
+                    <div class="skill-icon">
+                        <i class="fab fa-git-alt"></i>
+                    </div>
+                    <h3>Git</h3>
+                </div>
+                <div class="skill-card" data-category="tools">
+                    <div class="skill-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <h3>GitHub</h3>
+                </div>
+                <div class="skill-card" data-category="database">
                     <div class="skill-icon">
                         <i class="fas fa-database"></i>
                     </div>
                     <h3>MySQL</h3>
                 </div>
-                <div class="skill-card">
+                <div class="skill-card" data-category="database">
                     <div class="skill-icon">
                         <i class="fas fa-database"></i>
                     </div>
@@ -361,6 +428,28 @@
         <span class="close-lightbox">&times;</span>
         <img class="lightbox-content" id="lightbox-img">
         <div class="lightbox-caption"></div>
+    </div>
+
+    <!-- Resume download options -->
+    <div class="resume-modal" id="resumeModal" role="dialog" aria-modal="true" aria-labelledby="resumeModalTitle" hidden>
+        <div class="resume-modal-content">
+            <button class="close-resume-modal" type="button" aria-label="Close resume download options">&times;</button>
+            <p class="modal-eyebrow">Choose a format</p>
+            <h2 id="resumeModalTitle">Download my resume</h2>
+            <p>Select the format that works best for you.</p>
+            <div class="resume-options">
+                <a class="resume-option" href="resume/Chandra_Prakash_Choubisa_Resume.pdf" download>
+                    <i class="fas fa-file-pdf" aria-hidden="true"></i>
+                    <span><strong>PDF Resume</strong><small>Best for printing and sharing</small></span>
+                    <i class="fas fa-download" aria-hidden="true"></i>
+                </a>
+                <a class="resume-option" href="resume/resume.txt" download>
+                    <i class="fas fa-file-lines" aria-hidden="true"></i>
+                    <span><strong>Text Resume</strong><small>Lightweight and easy to read</small></span>
+                    <i class="fas fa-download" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
     </div>
 
     <script src="script.js"></script>
