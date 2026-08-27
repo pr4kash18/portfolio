@@ -1,42 +1,167 @@
-Chandra Prakash Choubisa
-Student - BTech CSE (3rd Year)
-Geetanjali Institute of Technical Studies, Udaipur, Rajasthan
+CHANDRA PRAKASH CHOUBISA
+
+Machine Learning Enthusiast | Python | FastAPI | Scikit-learn | Streamlit
 
 Email: cpchoubisa18@gmail.com
 Location: Udaipur, Rajasthan
 GitHub: https://github.com/pr4kash18
+LinkedIn: https://www.linkedin.com/in/chandra-prakash-choubisa-0526653b7
+Portfolio: https://pr4kash18.github.io/portfolio/
 
-Objective:
-Aspiring machine learning practitioner with strong Python skills and growing expertise in DSA in Java for logic building. Seeking opportunities to apply machine learning, Python, and algorithmic problem solving to practical projects.
+==================================================
+PROFESSIONAL SUMMARY
+==================================================
 
-Education:
-Bachelor of Technology in Computer Science and Engineering
+Aspiring AI/ML Engineer with hands-on experience in Machine Learning,
+Deep Learning, and Python, focused on building end-to-end AI applications.
+Skilled in developing practical, real-world ML solutions using
+Scikit-learn, Streamlit, FastAPI, and Flask, with a strong foundation in
+data preprocessing, model building, and deployment.
+
+Driven by curiosity and consistent practice to strengthen problem-solving
+ability and engineering fundamentals, with the goal of growing into a
+strong AI/ML and Backend Engineering role.
+
+==================================================
+TECHNICAL SKILLS
+==================================================
+
+Programming Languages
+- Python
+- Java
+- C
+- C++
+- JavaScript
+- HTML
+- CSS
+
+Machine Learning & Data Science
+- Scikit-learn
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Naive Bayes
+- Random Forest
+- Support Vector Machine (SVM)
+- K-Nearest Neighbors (KNN)
+
+Tools & Platforms
+- Streamlit
+- FastAPI
+- Flask
+- Git
+- GitHub
+- MySQL
+- MongoDB
+- Jupyter Notebook
+- Google Colab
+- IntelliJ IDEA
+
+Core Concepts
+- Machine Learning Pipelines
+- Feature Engineering
+- Exploratory Data Analysis (EDA)
+- Data Preprocessing
+- Object-Oriented Programming (OOP)
+- Data Structures & Algorithms (Java)
+- JDBC
+- Backend Development
+
+==================================================
+PROJECTS
+==================================================
+
+1. Spam Hunter – AI-Powered Spam Detector
+
+Live Demo:
+spam-hunter.streamlit.app
+
+Description:
+- Built an ML-based spam detection web application using Python,
+  Scikit-learn (Naive Bayes + TF-IDF), and Streamlit.
+- Achieved high accuracy for SMS and email spam classification.
+- Created a real-time interactive user interface.
+- Deployed the application on Streamlit Cloud.
+
+Tech Stack:
+Python, Scikit-learn, Pandas, NumPy, Joblib, Streamlit
+
+GitHub:
+github.com/pr4kash18/spam-message-detector
+
+
+2. Car Price Prediction
+
+GitHub:
+github.com/pr4kash18
+
+Description:
+- Developed a regression model to predict car prices using multiple
+  algorithms including Linear Regression, Random Forest, SVR, and KNN.
+- Built a complete preprocessing pipeline with imputation, scaling,
+  ordinal encoding, and one-hot encoding using Scikit-learn Pipelines.
+- Compared models using R² Score and Mean Absolute Error (MAE).
+
+Tech Stack:
+Python, Scikit-learn, Pandas, Matplotlib, Seaborn, Streamlit
+
+
+3. House Price Prediction
+
+GitHub:
+github.com/pr4kash18
+
+Description:
+- Built a regression model for house price prediction.
+- Implemented feature selection and a complete preprocessing pipeline.
+- Deployed the project as an interactive Streamlit web application.
+
+Tech Stack:
+Python, Scikit-learn, Streamlit
+
+==================================================
+INTERNSHIP EXPERIENCE
+==================================================
+
+AI/ML Intern – Grras Solutions, Jaipur
+Duration: January 2025 – June 2025
+
+90-Hour Industry Internship Program
+
+Responsibilities:
+- Completed hands-on training in Machine Learning, Deep Learning,
+  and Large Language Model (LLM) fundamentals.
+- Performed end-to-end data preprocessing including data cleaning,
+  EDA, and feature engineering using Pandas and NumPy.
+- Built and evaluated machine learning pipelines using Scikit-learn
+  for classification and regression algorithms such as KNN, SVM,
+  and Random Forest.
+- Implemented OneHotEncoder, OrdinalEncoder, and StandardScaler
+  within Scikit-learn Pipelines.
+- Explored Deep Learning concepts and introductory LLM architecture.
+
+==================================================
+EDUCATION
+==================================================
+
 Geetanjali Institute of Technical Studies, Udaipur
-Expected Graduation: 2028
 
-Skills:
-• Programming Languages: Python, C, Java, JavaScript
-• Data Structures & Algorithms: Java
-• Web Technologies: HTML, CSS
-• Problem Solving and Analytical Thinking
+Degree:
+B.Tech – Computer Science & Engineering
 
+Duration:
+2024 – 2028 (Expected)
 
-Certifications:
-• Digital Productivity with AI - YuWaah & UNICEF
-• Basic Python - Simplilearn
-• Break Into Data Analytics - Coding Ninjas & KodeInKGP
-• Machine Learning using AI - by Grras
+CGPA:
+6+ (Ongoing)
 
-Projects:
-• House Price Predictor — A Python + Streamlit machine learning app for predicting Indian home prices with real-time input and data-driven insights.
-• Spam Hunter — An AI-powered spam detection web app using Python, scikit-learn, pandas, and Streamlit for live message classification.
-• Student Management System — A Java-based academic record platform using JDBC and MySQL to manage student data, attendance, and grades.
+==================================================
+CERTIFICATIONS
+==================================================
 
-Interests:
-• Machine Learning
-• Emerging Technologies
-• Building Practical Projects
-• Continuous Learning
-
-References:
-Available upon request
+- Digital Productivity with AI – YuWaah & UNICEF
+- Machine Learning using AI – Grras Solutions
+- AI/ML Internship Certificate – Grras Solutions
+- Break Into Data Analytics – Coding Ninjas & KodeInKGP
+- Basic Python – Simplilearn
